@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  </head>
+  <body>
+    <section class="card">
+      <!-- search bar -->
+      <div class="search-container">
+        <input
+          placeholder="Enter location"
+          type="search"
+          title="search"
+          id="search-input" />
+        <button title="search" type="submit" id="search-btn">
+          <span><i class="fa-solid fa-magnifying-glass"></i></span>
+        </button>
+      </div>
+      <!-- weather image -->
+      <div class="weather-info">
+        <div class="weather-container">
+          <div><span id="weather-description">sunny</span></div>
+          <div class="icon-div">
+            <img
+              width="200px"
+              height="200px"
+              src="images/clear.png"
+              alt=""
+              id="icon" />
+            <!-- <i id="favicon" class="fa-solid fa-sun fa-4x"></i> -->
+          </div>
+          <div class="temp-div">
+            <span id="location">Meerut</span>
+            <div class="temp-container">
+              <span id="temperature">20 °C</span>
+              <span id="feels-like"
+                >Feels-like <span id="feels-like-temp">24 °C</span></span
+              >
+            </div>
+          </div>
+        </div>
+        <!--  -->
+        <div class="other-info-container">
+          <div class="humidity">
+            <span class="material-symbols-outlined" style="font-size:60px;">
+              humidity_percentage
+              </span>
+            <div class="humidity-info">
+              <p>Humidity</p>
+              <span id="humidity-percent">60 %</span>
+            </div>
+          </div>
+          <div class="wind-speed">
+            <span class="material-symbols-outlined" style="font-size:60px;">
+              air
+              </span>
+            <div class="wind-info">
+              <p>Wind Speed</p>
+              <span id="wind-speed">18 m/s</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- div for invalid or wrong destination -->
+      <div id="error">Enter Valid location</div>
+    </section>
+    <!-- 
+    TODO: next five day weather forcast 
+    <section class="days-card">
+      <h2>5-Days Weather Forecast (not available with free api)</h2>
+      <div class="weather-days-card">
+        <div class="day">
+          <span class="day-name">Monday</span>
+          <span class="temperature">25°C</span>
+        </div>
+        <div class="day">
+          <span class="day-name">Monday</span>
+          <span class="temperature">25°C</span>
+        </div>
+        <div class="day">
+          <span class="day-name">Monday</span>
+          <span class="temperature">25°C</span>
+        </div>
+        <div class="day">
+          <span class="day-name">Monday</span>
+          <span class="temperature">25°C</span>
+        </div>
+        <div class="day">
+          <span class="day-name">Monday</span>
+          <span class="temperature">25°C</span>
+        </div>
+      </div>
+    </section> -->
+    <!-- script -->
+    <script src="script.js"></script>
+  </body>
+</html>
