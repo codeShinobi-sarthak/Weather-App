@@ -22,15 +22,12 @@ jobs:
         run: npm install
 
       - name: Build project
+        env:
+          API_KEY: ${{ secrets.API_KEY }}  # Pass the API key to the build process
         run: npm run build
 
       - name: Deploy to GitHub Pages
-        uses: actions/configure-pages@v3
-        with:
-          build-dir: 'dist'  # or 'build' if that's your build directory
-
-      - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
-          API_KEY: ${{ secrets.API_KEY }}
-          publish_dir: ./dist  # the directory where your build output is located
+          github_token: ${{ secrets.GITHUB_TOKEN }}  # Use GitHub Actions' built-in token
+          publish_dir: ./dist  # or './build' if that's your build directory
