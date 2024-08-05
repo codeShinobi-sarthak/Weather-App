@@ -12,7 +12,7 @@
 //   mist
 //   </span>`
 
-// ];
+// ];npx vite
 
 
 
@@ -62,11 +62,13 @@ function updateData(data) {
   windSpeed.innerText = data.wind.speed + " m/s";
 }
 
+const key = import.meta.env.VITE_API_KEY;
+
 // weather api
 async function weather(location) {
   try {
     const response = await fetch(
-      `https://api.openweathermap.org/data/2.5/weather?q=${location}&APPID=51b773c5774c0c330a2f003893cae5ba&units=metric`
+      `https://api.openweathermap.org/data/2.5/weather?q=${location}&APPID=${key}&units=metric`
     );
 
     if (response.status == 404) {
