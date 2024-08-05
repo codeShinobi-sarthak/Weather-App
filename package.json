@@ -1,19 +1,21 @@
 {
-  "name": "weather-app",
-  "version": "1.0.0",
-  "description": ">Check out the live demo: [Weather App Live Demo](https://codeshinobi-sarthak.github.io/Weather-App/)",
-  "main": "script.js",
-  "type": "module",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "dotenv": "^16.4.5"
-  },
-  "devDependencies": {
-    "vite": "^5.3.5"
-  }
+    "name": "weather-app",
+    "version": "1.0.0",
+    "description": ">Check out the live demo: [Weather App Live Demo](https://codeshinobi-sarthak.github.io/Weather-App/)",
+    "main": "script.js",
+    "type": "module",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "vite build",
+        "start": "vite"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "dotenv": "^16.4.5"
+    },
+    "devDependencies": {
+        "vite": "^5.3.5"
+    }
 }
