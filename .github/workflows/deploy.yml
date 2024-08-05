@@ -1,0 +1,36 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # or 'master' if that is your default branch
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'  # specify the Node.js version you use
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build project
+        run: npm run build
+
+      - name: Deploy to GitHub Pages
+        uses: actions/configure-pages@v3
+        with:
+          build-dir: 'dist'  # or 'build' if that's your build directory
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          API_KEY: ${{ secrets.API_KEY }}
+          publish_dir: ./dist  # the directory where your build output is located
