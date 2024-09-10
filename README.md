@@ -1,6 +1,6 @@
 # Weather App
 
->Check out the live demo: [Weather App Live Demo](https://codeshinobi-sarthak.github.io/Weather-App/)
+>Check out the live demo: [Weather App Live Demo](https://codeshinobi-sarthak.netlify.app/)
 
 ## Overview
 
